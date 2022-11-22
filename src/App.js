@@ -7,6 +7,8 @@ import { Route, Switch, Routes } from 'react-router-dom';
 
 import { BrowserRouter as Router, useParams } from 'react-router-dom';
 import List from "./components/List"
+import List2 from './components/List2';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -20,9 +22,9 @@ function App() {
 
           <Route path='/' element={< Body />} />
 
-          <Route path='/records' element={< List />} />
-
-
+          <Route path='/record1' element={< List />} />
+          <Route path='/record2' element={< List2 />} />
+          <Route path='/Login' element={< Login />} />
         </Routes>
       </Router>
     </div >
