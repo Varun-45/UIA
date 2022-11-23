@@ -78,7 +78,7 @@ const List2 = () => {
         setclicked(true);
         setText("scanning")
         setTimeout(() => {
-            setclicked(0);
+            setclicked(false);
             setText("scan completed")
         }, 3000);
 
