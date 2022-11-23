@@ -14,7 +14,7 @@ const List2 = () => {
     const [List, setList] = useState([]);
     const [image, setImage] = useState(null);
     const [Url, setUrl] = useState("")
-    const [clicked, setclicked] = useState(0);
+    const [clicked, setclicked] = useState(false);
     const [text, setText] = useState("scan")
     useEffect(() => {
         onValue(ref(db, "Users"), snapshot => {
@@ -75,7 +75,7 @@ const List2 = () => {
 
     }).resize();
     function onclicked() {
-        setclicked(1);
+        setclicked(true);
         setText("scanning")
         setTimeout(() => {
             setclicked(0);
