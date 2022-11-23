@@ -11,7 +11,7 @@ import tumor from "../Images/tumor.jpg"
 import { CLoadingButton } from '@coreui/react'
 
 const Data = () => {
-    const [clicked, setclicked] = useState(0);
+    const [clicked, setclicked] = useState(false);
     const [List, setList] = useState([]);
     const [image, setImage] = useState(null);
     const [Url, setUrl] = useState("")
@@ -75,7 +75,7 @@ const Data = () => {
     }).resize();
 
     function onclicked() {
-        setclicked(1);
+        setclicked(true);
         setText("scanning")
         setTimeout(() => {
             setclicked(0);
